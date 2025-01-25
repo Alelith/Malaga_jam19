@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //using Random = UnityEngine.Random;
 
-public class GachaGame : MonoBehaviour
-{
+public class GachaGame : MonoBehaviour {
 
     [SerializeField]
     Transform[] puntosSpawners;
