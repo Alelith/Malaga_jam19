@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,12 +10,15 @@ public class DressGameController : MonoBehaviour, IInitialSettings
     [SerializeField] List<GameObject> shirts;
     [SerializeField] List<GameObject> jeans;
     [SerializeField] List<GameObject> foots;
+    [SerializeField] RectTransform openCloset;
 
-    readonly List<GameObject> correctDresses = new List<GameObject>();
-    readonly List<GameObject> selectedDresses = new List<GameObject>();
+    List<GameObject> correctDresses = new List<GameObject>();
+    List<GameObject> selectedDresses = new List<GameObject>();
     Dictionary<RectTransform, bool> anchors = new Dictionary<RectTransform, bool>();
     RectTransform tempDress;
     readonly Dictionary<string, Vector2> tempPosition = new Dictionary<string, Vector2>();
+
+    Dictionary<RectTransform, RectTransform> anchored = new(); 
 
     void Start()
     {
@@ -31,6 +35,12 @@ public class DressGameController : MonoBehaviour, IInitialSettings
 
         foreach (var i in GameObject.FindGameObjectsWithTag("Anchor"))
             anchors.Add((RectTransform)i.transform, false);
+    }
+
+    void FixedUpdate()
+    {
+        foreach (var ancor in anchored)
+            ancor.Key.position = ancor.Value.position;
     }
 
     void Update()
@@ -55,6 +65,8 @@ public class DressGameController : MonoBehaviour, IInitialSettings
                         selectedDresses.Remove(tempDress.gameObject);
                     tempDress.anchoredPosition = tempPosition[tempDress.name];
                     anchors[anchor.Key] = false;
+                    if (anchored.ContainsKey(tempDress))
+                        anchored.Remove(tempDress);
                     break;
                 }
                 if (anchor.Key.name.Contains("Shirt") && !anchor.Value && 
@@ -64,6 +76,8 @@ public class DressGameController : MonoBehaviour, IInitialSettings
                     anchors[anchor.Key] = true;
                     
                     selectedDresses.Add(tempDress.gameObject);
+                    
+                    anchored.Add(tempDress, anchor.Key);
                     break;
                 }
             }
@@ -79,6 +93,8 @@ public class DressGameController : MonoBehaviour, IInitialSettings
                         selectedDresses.Remove(tempDress.gameObject);
                     tempDress.anchoredPosition = tempPosition[tempDress.name];
                     anchors[anchor.Key] = false;
+                    if (anchored.ContainsKey(tempDress))
+                        anchored.Remove(tempDress);
                     break;
                 }
                 if (anchor.Key.name.Contains("Jean") && !anchor.Value && 
@@ -88,6 +104,8 @@ public class DressGameController : MonoBehaviour, IInitialSettings
                     anchors[anchor.Key] = true;
                     
                     selectedDresses.Add(tempDress.gameObject);
+                    
+                    anchored.Add(tempDress, anchor.Key);
                     break;
                 }
             }
@@ -103,6 +121,8 @@ public class DressGameController : MonoBehaviour, IInitialSettings
                         selectedDresses.Remove(tempDress.gameObject);
                     tempDress.anchoredPosition = tempPosition[tempDress.name];
                     anchors[anchor.Key] = false;
+                    if (anchored.ContainsKey(tempDress))
+                        anchored.Remove(tempDress);
                     break;
                 }
                 if (anchor.Key.name.Contains("Foot") && !anchor.Value && 
@@ -112,6 +132,8 @@ public class DressGameController : MonoBehaviour, IInitialSettings
                     anchors[anchor.Key] = true;
                     
                     selectedDresses.Add(tempDress.gameObject);
+                    
+                    anchored.Add(tempDress, anchor.Key);
                     break;
                 }
             }
@@ -122,14 +144,24 @@ public class DressGameController : MonoBehaviour, IInitialSettings
     
     public void OnCheckDresses()
     {
-        bool correct = true;
+        int correctDressesCount = 0;
         foreach (var dress in correctDresses)
             if (selectedDresses.Contains(dress))
-                correct = false;
-        if (correct)
+                correctDressesCount++;
+        if (correctDressesCount == 3)
             Debug.Log("Correct!");
         else
             Debug.Log("Incorrect!");
+    }
+    
+    public void OnChangeCloset(RectTransform newCloset)
+    {
+        if (openCloset == newCloset) return;
+        openCloset.DOAnchorPosY(openCloset.sizeDelta.y, 0.5f).OnComplete(() =>
+        {
+            openCloset = newCloset;
+            openCloset.DOAnchorPosY(0, 0.5f);
+        });
     }
 
     public void SetInitialSettings()
