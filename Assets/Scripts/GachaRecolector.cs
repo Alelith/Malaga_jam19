@@ -5,10 +5,6 @@ using TMPro;
 
 public class GachaRecolector : MonoBehaviour
 {
-
-    //[SerializeField]
-    
-
     [SerializeField]
     Rigidbody2D recolector;
 
@@ -19,22 +15,23 @@ public class GachaRecolector : MonoBehaviour
 
         Vector2 pos = new Vector2(transform.position.x,transform.position.y);
    
-        if (Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-            recolector.MovePosition(pos + Vector2.left*Time.deltaTime*multiplicador);
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
+            recolector.totalForce = Vector2.zero;
+            recolector.AddForce(Vector2.left*Time.deltaTime*multiplicador);
         }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-            recolector.MovePosition(pos + Vector2.right*Time.deltaTime*multiplicador);
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
+            recolector.totalForce = Vector2.zero;
+            recolector.AddForce(Vector2.right*Time.deltaTime*multiplicador);
         }
 
     }
 
 
     void OnTriggerEnter2D(Collider2D other) {
-    if (other.CompareTag("ObjetoGacha")) {
-    // 
-    }
-
+        if (other.CompareTag("ObjetoGacha")) {
+            Destroy(other.gameObject);
+        }
     }
 
 }
