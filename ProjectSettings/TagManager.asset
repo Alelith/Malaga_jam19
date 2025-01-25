@@ -8,14 +8,15 @@ TagManager:
   - Jean
   - Foot
   - Anchor
+  - ObjetoGacha
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bola
   - Water
   - UI
-  - 
+  - ParedGacha
   - 
   - 
   - 
