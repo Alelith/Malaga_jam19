@@ -7,7 +7,7 @@ public class GachaRecolector : MonoBehaviour
 {
 
     //[SerializeField]
-
+    
 
     [SerializeField]
     Rigidbody2D recolector;
