@@ -756,7 +756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ed4ee28e70fb74fbc695c8311e27f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CreditCanvas: {fileID: 102920290}
   MenuCanvas: {fileID: 1210071687}
 --- !u!1 &619394800
 GameObject:

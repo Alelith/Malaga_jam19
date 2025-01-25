@@ -5,11 +5,21 @@ using TMPro;
 
 public class GachaRecolector : MonoBehaviour
 {
+
+    int puntos=0;
+
+    [SerializeField]
+    TMP_Text contadorText;
+
     [SerializeField]
     Rigidbody2D recolector;
 
     [SerializeField]
     float multiplicador = 1.0f;
+
+    void OnEnable() {
+        puntos=0;    
+    }
 
     void Update() {
 
@@ -25,12 +35,17 @@ public class GachaRecolector : MonoBehaviour
             recolector.AddForce(Vector2.right*Time.deltaTime*multiplicador);
         }
 
+        // Actualiza textos: contador y demas
+        contadorText.text =  $"{puntos}";
+
+        //
     }
 
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("ObjetoGacha")) {
             Destroy(other.gameObject);
+            puntos++;
         }
     }
 
