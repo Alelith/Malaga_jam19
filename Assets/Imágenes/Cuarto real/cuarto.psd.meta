@@ -99,18 +99,18 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: telefono
+  - name: WhatsApp Image 2024-09-23 at 00.00.06 - copia 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 678
+      x: 4
       y: 1092
-      width: 181
-      height: 139
-    spriteID: 4874b47e7a29fd249914cd311433b212
+      width: 494
+      height: 1080
+    spriteID: 0d549d4b4085694479929b9c56a407f3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -118,7 +118,28 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 678, y: 1092}
+    uvTransform: {x: 4, y: 1092}
+    spritePosition: {x: 1426, y: 0}
+  - name: telefono
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2719
+      width: 181
+      height: 139
+    spriteID: 4d591569bbe260445a1dda8da278a3dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2719}
     spritePosition: {x: 963, y: 276}
   - name: el wiwi
     originalName: 
@@ -127,11 +148,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 867
-      y: 1092
+      x: 333
+      y: 2456
       width: 164
       height: 151
-    spriteID: dc3c830e16a81354d840dffa98d940e1
+    spriteID: 0380bcaa4571c8044b089fcfa8ef9544
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 867, y: 1092}
+    uvTransform: {x: 333, y: 2456}
     spritePosition: {x: 1108, y: 512}
   - name: ordenador
     originalName: 
@@ -148,11 +169,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 349
-      y: 1092
+      x: 4
+      y: 2456
       width: 321
       height: 255
-    spriteID: d624215e5b90b384d96aaab62586b6ad
+    spriteID: 9cd5bfae7c9812646998973425fb0067
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,7 +181,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 349, y: 1092}
+    uvTransform: {x: 4, y: 2456}
     spritePosition: {x: 305, y: 643}
   - name: Capa 3 - copia 2
     originalName: 
@@ -170,10 +191,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1092
+      y: 2180
       width: 337
       height: 268
-    spriteID: df3c1ab4022fc3c46b3744b5b556bb08
+    spriteID: 7e8c83794fc3f9448b06a724f1f2d226
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +202,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1092}
+    uvTransform: {x: 4, y: 2180}
     spritePosition: {x: 623, y: 285}
   - name: WhatsApp Image 2024-09-23 at 00.00.06 - copia
     originalName: 
@@ -194,7 +215,7 @@ ScriptedImporter:
       y: 4
       width: 1920
       height: 1080
-    spriteID: 97e43033116a3fa49ae3d03661756384
+    spriteID: 33b4fc52ccad69c45927a91cad0a792a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -276,13 +297,23 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: WhatsApp Image 2024-09-23 at 00.00.06 - copia 2
+    spriteName: WhatsApp Image 2024-09-23 at 00.00.06 - copia 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0d549d4b4085694479929b9c56a407f3
+    layerID: 0
+    mosaicPosition: {x: 4, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: telefono
     spriteName: telefono
     isGroup: 0
     parentIndex: -1
-    spriteID: 4874b47e7a29fd249914cd311433b212
-    layerID: 0
-    mosaicPosition: {x: 678, y: 1092}
+    spriteID: 4d591569bbe260445a1dda8da278a3dc
+    layerID: 511388366
+    mosaicPosition: {x: 4, y: 2719}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -290,9 +321,9 @@ ScriptedImporter:
     spriteName: el wiwi
     isGroup: 0
     parentIndex: -1
-    spriteID: dc3c830e16a81354d840dffa98d940e1
+    spriteID: 0380bcaa4571c8044b089fcfa8ef9544
     layerID: 483244013
-    mosaicPosition: {x: 867, y: 1092}
+    mosaicPosition: {x: 333, y: 2456}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -300,9 +331,9 @@ ScriptedImporter:
     spriteName: ordenador
     isGroup: 0
     parentIndex: -1
-    spriteID: d624215e5b90b384d96aaab62586b6ad
+    spriteID: 9cd5bfae7c9812646998973425fb0067
     layerID: -87603966
-    mosaicPosition: {x: 349, y: 1092}
+    mosaicPosition: {x: 4, y: 2456}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -310,9 +341,9 @@ ScriptedImporter:
     spriteName: Capa 3 - copia 2
     isGroup: 0
     parentIndex: -1
-    spriteID: df3c1ab4022fc3c46b3744b5b556bb08
+    spriteID: 7e8c83794fc3f9448b06a724f1f2d226
     layerID: -1732869609
-    mosaicPosition: {x: 4, y: 1092}
+    mosaicPosition: {x: 4, y: 2180}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -320,7 +351,7 @@ ScriptedImporter:
     spriteName: WhatsApp Image 2024-09-23 at 00.00.06 - copia
     isGroup: 0
     parentIndex: -1
-    spriteID: 97e43033116a3fa49ae3d03661756384
+    spriteID: 33b4fc52ccad69c45927a91cad0a792a
     layerID: 399270369
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -329,7 +360,7 @@ ScriptedImporter:
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638733658799070403
+  platformSettingsDirtyTick: 638733959115148603
   spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
