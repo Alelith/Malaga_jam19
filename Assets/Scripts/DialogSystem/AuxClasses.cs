@@ -22,6 +22,7 @@ namespace DialogSystem
             { new Regex(@"<a:(?<attribute>\w*)( k=(?<k>(\d*(?:\,\d+)?)))?( q=(?<q>(\d*(?:\,\d+)?)))?( c=(?<c>(\d*(?:\,\d+)?)))?( origin=(?<origin>(#([0-9A-Fa-f][0-9A-Fa-f]){3})) target=(?<target>(#([0-9A-Fa-f][0-9A-Fa-f]){3})))?>"), ActionType.DIALOGANIMATION },
             { new Regex("</a>"), ActionType.ENDANIMATION }
         };
+        // <a:wave>Escribo mi texto animado</a>
 
         static readonly Dictionary<Regex, TMPTagType> TMPTags = new()
         {
