@@ -1,0 +1,618 @@
+fileFormatVersion: 2
+guid: 28bb085099160b644916d2de74eaa9e1
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: shadow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1216
+      y: 1092
+      width: 303
+      height: 580
+    spriteID: ec5d1af13a70f8e438114afaa3d1c9f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -401, y: 1092}
+    spritePosition: {x: 1617, y: 0}
+  - name: burbuja1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1087
+      y: 3704
+      width: 80
+      height: 79
+    spriteID: afd7eefe4d923ad41a6b369fe69894aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1087, y: 3704}
+    spritePosition: {x: 1161, y: 687}
+  - name: burbuja2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 2894
+      width: 80
+      height: 79
+    spriteID: 72d85c1837e9fd24794fdb5c79b74535
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1024, y: 2894}
+    spritePosition: {x: 1475, y: 687}
+  - name: burbuja3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1112
+      y: 2894
+      width: 80
+      height: 79
+    spriteID: 1794670fbb021d74097ba65043df70a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1112, y: 2894}
+    spritePosition: {x: 1370, y: 687}
+  - name: burbuja4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 994
+      y: 3825
+      width: 80
+      height: 79
+    spriteID: 6888edbc9f2b4404bb807a5cd00ec8e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 994, y: 3825}
+    spritePosition: {x: 1258, y: 687}
+  - name: contador
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 733
+      y: 2894
+      width: 283
+      height: 79
+    spriteID: 5b6bb1082f411a246b21c103e7a9de1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 733, y: 2894}
+    spritePosition: {x: 627, y: 871}
+  - name: espuma1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3704
+      width: 1075
+      height: 113
+    spriteID: 6d1b5912beed5b047ac86d0fc4d7b5a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3704}
+    spritePosition: {x: 611, y: 351}
+  - name: pesesito
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1216
+      y: 1680
+      width: 276
+      height: 268
+    spriteID: 426d6ce495cf3894e9bb6216a8f9df2a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1216, y: 1680}
+    spritePosition: {x: 1198, y: 393}
+  - name: espuma2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3825
+      width: 982
+      height: 123
+    spriteID: 061486933e925554fb2666508d8fd6fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3825}
+    spritePosition: {x: 704, y: 345}
+  - name: fondo juego
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3071
+      width: 1106
+      height: 625
+    spriteID: 0205c9e9e1478d5488a095299ed7b087
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3071}
+    spritePosition: {x: 597, y: 344}
+  - name: ordenador
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 1204
+      height: 955
+    spriteID: 45b60697f03a57645b2d4340d1331263
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1092}
+    spritePosition: {x: 545, y: 71}
+  - name: cortina
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2055
+      width: 721
+      height: 1008
+    spriteID: 64d9abfc806e4d2478f5a25a686939ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2055}
+    spritePosition: {x: 48, y: 72}
+  - name: ventana rara
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 733
+      y: 2055
+      width: 405
+      height: 831
+    spriteID: 58af1e1335ce4c546af3880f1000a712
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 733, y: 2055}
+    spritePosition: {x: 0, y: 249}
+  - name: escritorio/pared
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1920
+      height: 1080
+    spriteID: de1a0e857bf6e0c468dd313e559a518b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: shadow
+    spriteName: shadow
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ec5d1af13a70f8e438114afaa3d1c9f4
+    layerID: 0
+    mosaicPosition: {x: 1216, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: burbuja1
+    spriteName: burbuja1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: afd7eefe4d923ad41a6b369fe69894aa
+    layerID: 2126112526
+    mosaicPosition: {x: 1087, y: 3704}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: burbuja2
+    spriteName: burbuja2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 72d85c1837e9fd24794fdb5c79b74535
+    layerID: -602770829
+    mosaicPosition: {x: 1024, y: 2894}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: burbuja3
+    spriteName: burbuja3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1794670fbb021d74097ba65043df70a8
+    layerID: 963313112
+    mosaicPosition: {x: 1112, y: 2894}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: burbuja4
+    spriteName: burbuja4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6888edbc9f2b4404bb807a5cd00ec8e1
+    layerID: -1765570243
+    mosaicPosition: {x: 994, y: 3825}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: contador
+    spriteName: contador
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5b6bb1082f411a246b21c103e7a9de1d
+    layerID: 928596558
+    mosaicPosition: {x: 733, y: 2894}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: espuma1
+    spriteName: espuma1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6d1b5912beed5b047ac86d0fc4d7b5a7
+    layerID: -2143829066
+    mosaicPosition: {x: 4, y: 3704}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pesesito
+    spriteName: pesesito
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 426d6ce495cf3894e9bb6216a8f9df2a
+    layerID: 1714706448
+    mosaicPosition: {x: 1216, y: 1680}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: espuma2
+    spriteName: espuma2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 061486933e925554fb2666508d8fd6fa
+    layerID: -2143829063
+    mosaicPosition: {x: 4, y: 3825}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: fondo juego
+    spriteName: fondo juego
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0205c9e9e1478d5488a095299ed7b087
+    layerID: -690312978
+    mosaicPosition: {x: 4, y: 3071}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ordenador
+    spriteName: ordenador
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 45b60697f03a57645b2d4340d1331263
+    layerID: -87603966
+    mosaicPosition: {x: 4, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: cortina
+    spriteName: cortina
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 64d9abfc806e4d2478f5a25a686939ae
+    layerID: 1561983852
+    mosaicPosition: {x: 4, y: 2055}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ventana rara
+    spriteName: ventana rara
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 58af1e1335ce4c546af3880f1000a712
+    layerID: 264594687
+    mosaicPosition: {x: 733, y: 2055}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: escritorio/pared
+    spriteName: escritorio/pared
+    isGroup: 0
+    parentIndex: -1
+    spriteID: de1a0e857bf6e0c468dd313e559a518b
+    layerID: 1494240734
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638734236587846391
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
