@@ -17,6 +17,10 @@ public class GachaRecolector : MonoBehaviour
     [SerializeField]
     float multiplicador = 1.0f;
 
+    void OnEnable() {
+        puntos=0;    
+    }
+
     void Update() {
 
         Vector2 pos = new Vector2(transform.position.x,transform.position.y);
