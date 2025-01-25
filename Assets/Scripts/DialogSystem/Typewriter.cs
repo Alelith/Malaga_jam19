@@ -5,7 +5,6 @@ using TMPro;
 using UnityEditor;
 #endif
 using UnityEngine;
-using UnityEngine.Localization;
 
 namespace DialogSystem
 {
@@ -25,7 +24,7 @@ namespace DialogSystem
         TextAnimator textAnim;
         
         [SerializeField]
-        LocalizedString textToTypewrite;
+        string textToTypewrite;
         
         /// <summary>
         /// The coroutine that will animate the text
@@ -55,9 +54,9 @@ namespace DialogSystem
 
         void Start()
         {
-            if (textToTypewrite.IsEmpty) return;
+            if (string.IsNullOrEmpty(textToTypewrite)) return;
             List<DialogueAction> commands =
-                CustomTagsManager.ProccessMessage(textToTypewrite.GetLocalizedString(), out string totalTextMessage);
+                CustomTagsManager.ProccessMessage(textToTypewrite, out string totalTextMessage);
             Write(commands, totalTextMessage);
         }
 
