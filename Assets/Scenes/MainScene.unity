@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 508140366}
   - component: {fileID: 508140368}
   - component: {fileID: 508140369}
+  - component: {fileID: 508140370}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -404,6 +405,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9ba6e4dfe440a42a06b6b2237d3e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &508140370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508140364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ed4ee28e70fb74fbc695c8311e27f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuCanvas: {fileID: 508140368}
 --- !u!1 &647872743
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +484,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 647872744}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 508140370}
+          m_TargetAssemblyTypeName: CreditsTweening, Assembly-CSharp
+          m_MethodName: OnCredits
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 669618190}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -568,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -656,11 +682,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 4
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls: []
-  - eventID: 0
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 508140369}
+          m_TargetAssemblyTypeName: BackgroundTransitions, Assembly-CSharp
+          m_MethodName: MoveTowards
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 709184789}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 508140370}
+          m_TargetAssemblyTypeName: CreditsTweening, Assembly-CSharp
+          m_MethodName: OnCredits
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 360801193}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls: []
@@ -753,11 +807,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 4
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls: []
-  - eventID: 0
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 508140369}
+          m_TargetAssemblyTypeName: BackgroundTransitions, Assembly-CSharp
+          m_MethodName: MoveTowards
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 778442674}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 508140370}
+          m_TargetAssemblyTypeName: CreditsTweening, Assembly-CSharp
+          m_MethodName: OnCredits
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1042763801}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls: []
@@ -916,11 +998,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1042763798}
+  - {fileID: 669618187}
   - {fileID: 1436939116}
+  - {fileID: 1042763798}
   - {fileID: 360801190}
   - {fileID: 422391589}
-  - {fileID: 669618187}
   m_Father: {fileID: 2070562972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1083,11 +1165,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 4
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls: []
-  - eventID: 0
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 508140369}
+          m_TargetAssemblyTypeName: BackgroundTransitions, Assembly-CSharp
+          m_MethodName: MoveTowards
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1342296789}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 508140370}
+          m_TargetAssemblyTypeName: CreditsTweening, Assembly-CSharp
+          m_MethodName: OnCredits
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 422391592}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls: []
@@ -1336,11 +1446,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 4
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls: []
-  - eventID: 0
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 508140369}
+          m_TargetAssemblyTypeName: BackgroundTransitions, Assembly-CSharp
+          m_MethodName: MoveTowards
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2018781772}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 508140370}
+          m_TargetAssemblyTypeName: CreditsTweening, Assembly-CSharp
+          m_MethodName: OnCredits
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1436939119}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls: []
