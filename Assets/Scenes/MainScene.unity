@@ -403,6 +403,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -575,6 +579,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls: []
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &709184791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +673,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates:
   - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls: []
@@ -968,6 +980,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls: []
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1342296791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1201,6 +1217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates:
   - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls: []
