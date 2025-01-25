@@ -18,7 +18,7 @@ public class GachaGame : MonoBehaviour
     GameObject contador, puntaje;
 
     [SerializeField]
-    GameObject objetoPrefab;
+    GameObject[] objetoPrefab;
 
     // Start is called before the first frame update
     void Awake() {
@@ -43,7 +43,7 @@ public class GachaGame : MonoBehaviour
             nuevaPosicion=Random.Range(0,5);
         }while(nuevaPosicion == lastPosicionSpawn);
 
-        Instantiate(objetoPrefab,puntosSpawners[nuevaPosicion]);
+        Instantiate(objetoPrefab[Random.Range(0, objetoPrefab.Length)],puntosSpawners[nuevaPosicion]);
         lastPosicionSpawn = nuevaPosicion;
         objetosActual--;
       }

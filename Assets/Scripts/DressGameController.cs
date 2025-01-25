@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class DressGameController : MonoBehaviour
+public class DressGameController : MonoBehaviour, IInitialSettings
 {
     [SerializeField] List<GameObject> shirts;
     [SerializeField] List<GameObject> jeans;
@@ -130,5 +130,13 @@ public class DressGameController : MonoBehaviour
             Debug.Log("Correct!");
         else
             Debug.Log("Incorrect!");
+    }
+
+    public void SetInitialSettings()
+    {
+        CanvasGroup self = GetComponent<CanvasGroup>();
+
+        self.interactable = true;
+        self.blocksRaycasts = true;
     }
 }

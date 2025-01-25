@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3948161964169087623}
   - component: {fileID: 670277122547836607}
   m_Layer: 0
-  m_Name: BolaCae
+  m_Name: BolaCae 1
   m_TagString: ObjetoGacha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3168313209158634369, guid: 28bb085099160b644916d2de74eaa9e1, type: 3}
+  m_Sprite: {fileID: 6711247354403386880, guid: 28bb085099160b644916d2de74eaa9e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class MobileController : MonoBehaviour
+public class MobileController : MonoBehaviour, IInitialSettings
 {
     [SerializeField] GameObject carrousel;
     
@@ -12,5 +12,13 @@ public class MobileController : MonoBehaviour
             carrousel.transform.GetChild(0).SetAsLastSibling();
             ((RectTransform)carrousel.transform).anchoredPosition = new Vector2(0, 0);
         });
+    }
+
+    public void SetInitialSettings()
+    {
+        CanvasGroup self = GetComponent<CanvasGroup>();
+
+        self.interactable = true;
+        self.blocksRaycasts = true;
     }
 }
