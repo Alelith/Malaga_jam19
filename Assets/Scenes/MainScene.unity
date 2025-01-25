@@ -576,7 +576,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508140364}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1908,6 +1908,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 721010552}
     - target: {fileID: 1299547131058552277, guid: 28fdaa897ba835d42a843187f389e5af, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299547131058552277, guid: 28fdaa897ba835d42a843187f389e5af, type: 3}
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
@@ -2018,6 +2022,10 @@ PrefabInstance:
     - target: {fileID: 5592549877953580847, guid: 28fdaa897ba835d42a843187f389e5af, type: 3}
       propertyPath: m_Name
       value: Closet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592549877953580847, guid: 28fdaa897ba835d42a843187f389e5af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7123657171126857021, guid: 28fdaa897ba835d42a843187f389e5af, type: 3}
       propertyPath: m_Pivot.x
@@ -2351,56 +2359,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1653384128 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 865263338575168481, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-  m_PrefabInstance: {fileID: 6149777759512859564}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1653384134
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653384128}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.76, y: 2.68}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.76, y: 2.68}
-  m_EdgeRadius: 0
 --- !u!1 &1727911024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,33 +2752,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1308826875}
     m_Modifications:
-    - target: {fileID: 831932326640840175, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 2162918584263936734, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-      propertyPath: multiplicador
-      value: 714.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240906679256469523, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3866449695806243477, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4684232411576755709, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
       propertyPath: m_Name
       value: CestaPCGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416519597718628424, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-      propertyPath: m_Radius
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7472895067415965347, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9158972187106674961, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
       propertyPath: m_Pivot.x
@@ -2902,14 +2836,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6416519597718628424, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 865263338575168481, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1653384134}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6f3d1d23b3d37e4d866f3465c637edd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -8,6 +8,5 @@ public class GachaObjectFall : MonoBehaviour
         if (other.CompareTag("ObjetoGacha")) {
             Destroy(other.gameObject); //this, el objeto
         }
-
     }
 }
