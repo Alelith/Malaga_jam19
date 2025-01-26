@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GridLogic : MonoBehaviour {
 
+    //[SerializeField]
     GridPieza solucionActual, solucionFinal;
 
     [SerializeField]
@@ -11,17 +12,23 @@ public class GridLogic : MonoBehaviour {
 
     void Awake() {
 
-        int columnas=5, filas=4;
+        int columnas=7, filas=10;
 
         // Solución final
         solucionFinal = new GridPieza();
         solucionFinal.columns = columnas;
         solucionFinal.rows = filas;
         int[,] mtxA  = { // Es la que se utiliza de referencia para comprobar la solucion
-            {-1, -1,  -1,  -1,  -1},
-            {-1, -1,  1,    2,   2},
-            {-1,  1,  1,    2,   2},
-            {-1, -1,  1,   -1,  -1}
+            {1, 1,  1,  1,  1,  1}, //1
+            {1, 1,  1,  1,  1,  1}, //2
+            {1, 1,  2,  2,  1,  1}, //3
+            {1, 1,  2,  2,  1,  1}, //1
+            {4, 4,  2,  2,  1,  1}, //2
+            {4, 4,  2,  2,  1,  1}, //3
+            {4, 4,  3,  3,  1,  1}, //7
+            {4, 4,  3,  3,  1,  1}, //8
+            {4, 4,  3,  3,  1,  1}, //9
+            {4, 4,  3,  3,  -1,  -1} //10
         };  // 1,2,3,4 es solución
         solucionFinal.matrizPieza = mtxA;
 
@@ -46,7 +53,9 @@ public class GridLogic : MonoBehaviour {
         bool test=true;
         for (int i=0; i < solucionActual.rows; i++) {
             for (int j=0; j < solucionActual.columns; j++) {
-                test &= solucionActual.matrizPieza[i,j] == solucionFinal.matrizPieza[i,j]; // Coincide (no se hace AND)
+                if (solucionFinal.matrizPieza[i,j] > -1) { // Solo comprueba las piezas que estén bien
+                    test &= solucionActual.matrizPieza[i,j] == solucionFinal.matrizPieza[i,j]; // Coincide (no se hace AND)
+                }
             }
         }
         return test;

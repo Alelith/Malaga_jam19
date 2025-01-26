@@ -13,24 +13,67 @@ public class GridPieza : MonoBehaviour {
     void Start() {
         switch(tipoPieza){
             case 1: {
-                columns = 2; 
-                rows = 3;
+                columns = 7; 
+                rows = 9;
                 int[,] mtx  = { // Es la que se utiliza de referencia para comprobar la solucion
-                    {-1, tipoPieza},
-                    {tipoPieza,  tipoPieza},
-                    {-1, tipoPieza}
+                    { 1,  1,   1,   1,  1,  1}, //1
+                    { 1,  1,   1,   1,  1,  1}, //2
+                    { 1,  1,  -1,  -1,  1,  1}, //3
+                    { 1,  1,  -1,  -1,  1,  1}, //1
+                    {-1, -1,  -1,  -1,  1,  1}, //2
+                    {-1, -1,  -1,  -1,  1,  1}, //2
+                    {-1, -1,  -1,  -1,  1,  1}, //2
+                    {-1, -1,  -1,  -1,  1,  1}, //2
+                    {-1, -1,  -1,  -1,  1,  1}, //2
                 };
                 matrizPieza = mtx;
                 break;
             }
             case 2: {
+                columns = 2; 
+                rows = 4;
+                int[,] mtx  = { // Es la que se utiliza de referencia para comprobar la solucion
+                    {2, 2},
+                    {2, 2},
+                    {2, 2},
+                    {2, 2}
+                };
+                matrizPieza = mtx;
                 break;
             }
             case 3: {
-
+                columns = 2; 
+                rows = 4;
+                int[,] mtx  = { // Es la que se utiliza de referencia para comprobar la solucion
+                    {3, 3},
+                    {3, 3},
+                    {3, 3},
+                    {3, 3}
+                };
+                matrizPieza = mtx;
                 break;
-            }default: {
-
+            }
+            case 4: {
+                columns = 2; 
+                rows = 6;
+                int[,] mtx  = { // Es la que se utiliza de referencia para comprobar la solucion
+                    {4, 4},
+                    {4, 4},
+                    {4, 4},
+                    {4, 4},
+                    {4, 4},                    
+                    {4, 4}
+                };
+                matrizPieza = mtx;
+                break;
+            }
+            default: {
+                columns = 1; 
+                rows = 1;
+                int[,] mtx  = { // Es la que se utiliza de referencia para comprobar la solucion
+                    {-1}
+                };
+                matrizPieza = mtx;
                 break;
             }
         }
@@ -52,6 +95,13 @@ public class GridPieza : MonoBehaviour {
         testMe &= this.ymax <= piezaTest.ymax;
 
         return testMe;
+    }
+
+    void Update() {
+        xmin=Time.time;
+        ymin=Time.time;
+        xmax=Time.time;
+        ymax=Time.time;
     }
 
 
