@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -27,13 +24,19 @@ public class BackgroundTransitions : MonoBehaviour
 
     public void OnStartMinigame(int minigameIndex)
     {
-        if (trapCount > 0)
+        if (trapCount > 0 && minigameIndex > 1)
         {
             int selection = Random.Range(0, trapMinigames.Length);
             
-            trapMinigames[selection].DOFade(0, 0.5f).OnComplete(() => trapMinigames[selection].GetComponent<IInitialSettings>().SetInitialSettings());
+            trapMinigames[selection].DOFade(0, 0.5f).OnComplete(() => trapMinigames[selection].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
         }
+        else if (minigameIndex < 1)
+            trapMinigames[minigameIndex].DOFade(0, 0.5f).OnComplete(() => trapMinigames[minigameIndex].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
+        else if (minigameIndex > 1)
+        {
+            minigames[minigameIndex - 2].DOFade(0, 0.5f).OnComplete(() => minigames[minigameIndex - 2].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
 
-        trapCount = 3;
+            trapCount = 3;
+        }
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class DressGameController : MonoBehaviour, IInitialSettings
+public class DressGameController : IInitialSettings
 {
     [SerializeField] List<GameObject> shirts;
     [SerializeField] List<GameObject> jeans;
@@ -207,7 +207,7 @@ public class DressGameController : MonoBehaviour, IInitialSettings
     
     public void OnHideInfo() => info.GetComponent<CanvasGroup>().DOFade(0, 0.5f);
 
-    public void SetInitialSettings()
+    public override void SetInitialSettings()
     {
         CanvasGroup self = GetComponent<CanvasGroup>();
 

@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class MobileController : MonoBehaviour, IInitialSettings
+public class MobileController : IInitialSettings
 {
     [SerializeField] GameObject carrousel;
     
@@ -14,7 +14,7 @@ public class MobileController : MonoBehaviour, IInitialSettings
         });
     }
 
-    public void SetInitialSettings()
+    public override void SetInitialSettings()
     {
         CanvasGroup self = GetComponent<CanvasGroup>();
 

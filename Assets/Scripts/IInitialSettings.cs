@@ -1,5 +1,7 @@
-public interface IInitialSettings
+using UnityEngine;
+
+public abstract class IInitialSettings : MonoBehaviour
 {
-    public void SetInitialSettings();
+    public abstract void SetInitialSettings();
 }
 

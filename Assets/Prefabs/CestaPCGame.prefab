@@ -226,7 +226,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1451837046401917916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7472895067415965347}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &865263338575168481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1122,7 @@ GameObject:
   - component: {fileID: 4937134174216578239}
   - component: {fileID: 3496504828732110365}
   - component: {fileID: 3866449695806243477}
+  - component: {fileID: 1083784720712339602}
   m_Layer: 5
   m_Name: CestaPCGame
   m_TagString: Untagged
@@ -1186,10 +1199,23 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4684232411576755709}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 1
+--- !u!114 &1083784720712339602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4684232411576755709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b88a31f9a899046a7de2b415d51d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameCore: {fileID: 7472895067415965347}
 --- !u!1 &6075380613168017907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 01 + segundos
+  m_text: 0123456789
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef08b455c27cabe41b58aee0d76b2a89, type: 2}
   m_sharedMaterial: {fileID: 678537293045221780, guid: ef08b455c27cabe41b58aee0d76b2a89, type: 2}
@@ -1641,7 +1667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4769503201260489060
 Transform:
   m_ObjectHideFlags: 0
@@ -1689,7 +1715,7 @@ MonoBehaviour:
   minTiempo: 0.4
   maxTiempo: 1.11
   contador: {fileID: 0}
-  puntaje: {fileID: 0}
+  puntaje: {fileID: 6075380613168017907}
   objetoPrefab:
   - {fileID: 4043772052646108017, guid: da30e21311b49f446a4c13cb61f876b6, type: 3}
   - {fileID: 4043772052646108017, guid: 5dc0aefa4a106e74e922d399812be6b1, type: 3}

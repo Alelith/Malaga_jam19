@@ -12,7 +12,7 @@ public class CreditsTweening : MonoBehaviour
     public void OnCredits(CanvasGroup target) {
         MenuCanvas.interactable = false;
         MenuCanvas.blocksRaycasts = false;
-        target.DOFade(1, 2).SetEase(Ease.InBounce).OnComplete(() => {
+        target.DOFade(1, 2).SetEase(Ease.InExpo).OnComplete(() => {
             target.interactable = true;
             target.blocksRaycasts = true;
         });
@@ -21,7 +21,7 @@ public class CreditsTweening : MonoBehaviour
     public void OffCredits(CanvasGroup target) {
         target.interactable = false;
         target.blocksRaycasts = false;
-        target.DOFade(0, 2).SetEase(Ease.OutBounce).OnComplete(() => {
+        target.DOFade(0, 2).SetEase(Ease.OutExpo).OnComplete(() => {
             MenuCanvas.interactable = true;
             MenuCanvas.blocksRaycasts = true;
         });
