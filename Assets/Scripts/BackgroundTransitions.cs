@@ -28,13 +28,13 @@ public class BackgroundTransitions : MonoBehaviour
         {
             int selection = Random.Range(0, trapMinigames.Length);
             
-            trapMinigames[selection].DOFade(0, 0.5f).OnComplete(() => trapMinigames[selection].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
+            trapMinigames[selection].DOFade(1, 0.5f).OnComplete(() => trapMinigames[selection].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
         }
-        else if (minigameIndex < 1)
-            trapMinigames[minigameIndex].DOFade(0, 0.5f).OnComplete(() => trapMinigames[minigameIndex].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
-        else if (minigameIndex > 1)
+        else if (minigameIndex <= 1)
+            trapMinigames[minigameIndex].DOFade(1, 0.5f).OnComplete(() => trapMinigames[minigameIndex].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
+        else
         {
-            minigames[minigameIndex - 2].DOFade(0, 0.5f).OnComplete(() => minigames[minigameIndex - 2].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
+            minigames[minigameIndex - 2].DOFade(1, 0.5f).OnComplete(() => minigames[minigameIndex - 2].gameObject.GetComponent<IInitialSettings>().SetInitialSettings());
 
             trapCount = 3;
         }
