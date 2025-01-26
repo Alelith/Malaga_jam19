@@ -6,4 +6,6 @@ public class Dialog : ScriptableObject
     [SerializeField] string[] dialog;
     
     public string this[int i] => dialog[i]; 
+    
+    public int Count => dialog.Length;
 }
