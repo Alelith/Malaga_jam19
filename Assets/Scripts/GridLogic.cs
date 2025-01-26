@@ -10,25 +10,25 @@ public class GridLogic : MonoBehaviour {
     [SerializeField]
     List<GridPieza> piezas;
 
-    void Awake() {
+    int columnas=7, filas=10;
 
-        int columnas=7, filas=10;
+    void Awake() {
 
         // Solución final
         solucionFinal = new GridPieza();
         solucionFinal.columns = columnas;
         solucionFinal.rows = filas;
         int[,] mtxA  = { // Es la que se utiliza de referencia para comprobar la solucion
-            {1, 1,  1,  1,  1,  1}, //1
-            {1, 1,  1,  1,  1,  1}, //2
-            {1, 1,  2,  2,  1,  1}, //3
-            {1, 1,  2,  2,  1,  1}, //1
-            {4, 4,  2,  2,  1,  1}, //2
-            {4, 4,  2,  2,  1,  1}, //3
-            {4, 4,  3,  3,  1,  1}, //7
-            {4, 4,  3,  3,  1,  1}, //8
-            {4, 4,  3,  3,  1,  1}, //9
-            {4, 4,  3,  3,  -1,  -1} //10
+            {1, 1,  1,  1,  1,  1,  1}, //1
+            {1, 1,  1,  1,  1,  1,  1}, //2
+            {1, 1,  2,  2,  2,  1,  1}, //3
+            {1, 1,  2,  2,  2,  1,  1}, //1
+            {4, 4,  2,  2,  2,  1,  1}, //2
+            {4, 4,  2,  2,  2,  1,  1}, //3
+            {4, 4,  3,  3,  3,  1,  1}, //7
+            {4, 4,  3,  3,  3,  1,  1}, //8
+            {4, 4,  3,  3,  3,  1,  1}, //9
+            {4, 4,  3,  3,  3,  -1,  -1} //10
         };  // 1,2,3,4 es solución
         solucionFinal.matrizPieza = mtxA;
 
@@ -37,13 +37,18 @@ public class GridLogic : MonoBehaviour {
         solucionActual.columns = columnas; 
         solucionActual.rows = filas;
         solucionActual.matrizPieza = new int [filas,columnas];
-        CleanActual();
+
+        for (int i=0; i < filas; i++) {
+            for (int j=0; j < columnas; j++) {
+                solucionActual.matrizPieza[i,j]=-1;
+            }
+        }
 
     }
 
     void CleanActual() {
-        for (int i=0; i < solucionActual.rows; i++) {
-            for (int j=0; j < solucionActual.columns; j++) {
+        for (int i=0; i < filas; i++) {
+            for (int j=0; j < columnas; j++) {
                 solucionActual.matrizPieza[i,j]=-1;
             }
         }
@@ -61,13 +66,10 @@ public class GridLogic : MonoBehaviour {
         return test;
     }
 
-    public void UpdateActualSolution() {
+    void Update() {
 
         // 1: Limpiamos la solución actual
         CleanActual();
-        
-        int filas=solucionFinal.rows;
-        int columnas=solucionFinal.columns;
 
         // 2: Por toda la lista de piezas 
         foreach (var pieza in piezas) {
@@ -81,19 +83,23 @@ public class GridLogic : MonoBehaviour {
                 //    Esa distancia, dará el desplazamiento para moverse en la matriz solución, recorriendo la matriz de this
                 //    El pivote es (xmin,ymin)
 
-                int RowOffset = (int)((float)filas     * (solucionFinal.xmax-pieza.xmin)/(solucionFinal.xmax-solucionFinal.xmin));
-                int ColOffSet = (int)((float)columnas  * (solucionFinal.ymax-pieza.ymin)/(solucionFinal.ymax-solucionFinal.ymin));
-                
+                int RowOffset = (int)((float)filas     * Mathf.Abs(solucionFinal.xmax-pieza.xmin)/Mathf.Abs(solucionFinal.xmax-solucionFinal.xmin));
+                int ColOffSet = (int)((float)columnas  * Mathf.Abs(solucionFinal.ymax-pieza.ymin)/Mathf.Abs(solucionFinal.ymax-solucionFinal.ymin));
+
                 // 2.3: Escribir en la solución actual, la ocupación de la pieza deseada
 
-                for (int i=0; i < filas; i++) {
-                    for (int j=0; j < columnas; j++) {
-
+                for (int i=0; i < pieza.rows; i++) {
+                    for (int j=0; j < pieza.columns; j++) {
+                        Debug.Log(i);
+                        Debug.Log(j);
                         int RowInSolution =    i+RowOffset;
                         int ColumnInSolution = j+ColOffSet;
 
                         // Sobreescribe todo el rato, esté bien o mal. Para eso está el isSolution()
                         if (pieza.matrizPieza[i,j] > -1) { // Si es valida la pos. i,j
+                            Debug.Log("---"+i+""+j);
+                            Debug.Log(RowInSolution);
+                            Debug.Log(ColumnInSolution);
                             solucionActual.matrizPieza[RowInSolution,ColumnInSolution] = pieza.tipoPieza;
                         }
 
