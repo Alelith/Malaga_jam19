@@ -12,4 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7663e8405477c74c805279b4f08e5f1, type: 3}
   m_Name: MobileDialogs
   m_EditorClassIdentifier: 
-  dialog: []
+  dialog:
+  - "Hey! C\xF3mo vas?"
+  - Bien! Estoy terminando de arreglarme y salgo
+  - "Ya me conoces, llegar\xE9 un poco tarde"
+  - "Perfe! Estoy deseando verte. Ha pasado mucho tiempo, que la \xFAltima vez no
+    viniste"
+  - "T\xFA?! Llegando tarde?! Nah, imposible"
+  - "Lo s\xE9, pero el resfriado no perdon\xF3"
+  - Te dejo que si no, no llego a tiempo
+  - "Por si acaso p\xE1same ubi en tiempo real"
+  - Lo intento, vale?!
+  - Bueno, esta vez te vemos fijo!
+  - "Perd\xF3n, no te entretengo m\xE1s"
+  - Okey! Nos vas avisando!
+  - "Perdona, no quer\xEDa enfadarte. Luego nos vemos <3"
+  - "Estamos ya en la plaza. \xBFAl final vienes?"
+  - "Perd\xF3n, se me ha ido el santo al cielo. Termino de arreglarme y voy."
+  - "Id tirando vosotros. Ya os pillar\xE9"
+  - "JAJAJAJAJA, me lo ve\xEDa venir. Si no est\xE1s aqu\xED en 10min te peto a llamadas"
+  - Okay. Pero porfa, procura venir, vale?
+  - "Te estamos esperando. Est\xE1s bien?"
+  - Que no me metas prisa! Ya voy!
+  - (dejar en visto)
+  - "Eso dices siempre. Estamos hartes, hay gente que se la pela, pero a m\xED me
+    duele"
+  - "Si no quieres, no tienes por qu\xE9 venir"
+  - Lo siento, de verdad. Te juro que estoy en ello
+  - (dejar en visto)
+  - "Quiero ir, pero es dif\xEDcil"
+  - No, no quiero ir
+  - Eso espero, porque de verdad que tengo muchas ganas de verte
+  - No vengas si no quieres. Total, como siempre
+  - Bueno, pase lo que pase, me tienes para hablar de lo que necesites
+  - Venimos a tu ciudad para que puedas venir y lo dices ahora? (Block)
