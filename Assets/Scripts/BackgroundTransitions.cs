@@ -38,5 +38,7 @@ public class BackgroundTransitions : MonoBehaviour
 
             trapCount = 3;
         }
+
+        trapCount--;
     }
 }
