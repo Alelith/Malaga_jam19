@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7663e8405477c74c805279b4f08e5f1, type: 3}
+  m_Name: ClosetDialogs
+  m_EditorClassIdentifier: 
+  dialog:
+  - "Es una camiseta de talla <a:color origin=#FF2222 target=#22FFFF><a:wave>10-12
+    a\xF1os</a></a>. Es <a:shake c=2>preocupante</a> que me siga quedando bien."
+  - "En realidad estaban las otras dos, pero se fue <a:dangle><color=#FFFFAA>desti\xF1endo</color></a>
+    con el tiempo."
+  - "No s\xE9, quiz\xE1 sea ense\xF1ar <a:incr><color=#AA66AA>demasiado</color></a>."
+  - "Lo m\xE1s parecido a ir en pijama sin que <a:wave><color=#66AA66>me miren mal</color></a>."
+  - "\xBFEn qu\xE9 momento decid\xED <a:slide><color=#BB2288>comprarme esto</color></a>
+    en Shein?"
+  - "Hoy no tengo el d\xEDa <a:jump><color=#FFAAFF>Girly Girl</color></a>."
+  - "Tiene <a:shake><color=#7777FF>demasiados agujeros</color></a> para salir, incluso
+    para m\xED."
+  - "No me <a:incr><color=#88DDFF>apetece mucho</color></a> pon\xE9rmelo hoy, la
+    verdad."
+  - "B\xE1sico, pero supongo que <a:wave><color=#55FFAA>no est\xE1 mal</color></a>."
+  - "\xBFPor qu\xE9 no lo he tirado aun? Bueno, es mono, <a:swing><color=#AAFF44>pero
+    no para ahora</color></a>."
+  - Demasiado arreglado para quedar con mis <a:swing><color=#FFAA88>colegas</color></a>.
+  - "No quiero ser el <a:shake><color=#77FFAA>hazmerre\xEDr del grupo</color></a>."
+  - "Es una opci\xF3n, si quiero acabar la <a:dangle><color=#FA668D>noche en el hospital</color></a>
+    con un esguince."
+  - "Antes estaban <a:incr><color=#FFFFAA>m\xE1s blancas</color></a>, pero bueno."
+  - "Fue muy gracioso cuando me las regalaron, <a:deform><color=#9D4F67>pero hasta
+    ah\xED</color></a>."
+  - 
+  - 
