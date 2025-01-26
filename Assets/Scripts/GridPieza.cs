@@ -10,6 +10,8 @@ public class GridPieza : MonoBehaviour {
     public int columns=0, rows=0;
     public int [,] matrizPieza;
 
+    [SerializeField] RectTransform info, selff;
+
     void Start() {
         switch(tipoPieza){
             case 1: {
@@ -97,11 +99,16 @@ public class GridPieza : MonoBehaviour {
         return testMe;
     }
 
+    public void OnDragPieza(RectTransform pieza) {
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(info,  Input.mousePosition, Camera.main,out Vector2 vector );
+        pieza.anchoredPosition = vector + (Vector2.right * 500);
+    }
+
     void Update() {
-        xmin=Time.time;
-        ymin=Time.time;
-        xmax=Time.time;
-        ymax=Time.time;
+        xmin=selff.anchoredPosition.x;
+        ymin=selff.anchoredPosition.y;
+        xmax=xmin + selff.sizeDelta.x;
+        ymax=ymin + selff.sizeDelta.y;
     }
 
 

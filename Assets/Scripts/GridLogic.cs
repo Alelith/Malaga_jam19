@@ -81,7 +81,7 @@ public class GridLogic : MonoBehaviour {
                 //    Esa distancia, dará el desplazamiento para moverse en la matriz solución, recorriendo la matriz de this
                 //    El pivote es (xmin,ymin)
 
-                int RowOffset = (int)((float)filas    * (solucionFinal.xmax-pieza.xmin)/(solucionFinal.xmax-solucionFinal.xmin));
+                int RowOffset = (int)((float)filas     * (solucionFinal.xmax-pieza.xmin)/(solucionFinal.xmax-solucionFinal.xmin));
                 int ColOffSet = (int)((float)columnas  * (solucionFinal.ymax-pieza.ymin)/(solucionFinal.ymax-solucionFinal.ymin));
                 
                 // 2.3: Escribir en la solución actual, la ocupación de la pieza deseada
