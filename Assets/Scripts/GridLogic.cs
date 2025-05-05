@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GridLogic : MonoBehaviour {
 
-    //[SerializeField]
-    GridPieza solucionActual, solucionFinal;
+ 
+ //   [SerializeField]
+    GridPieza solucionActual;
+    GridPieza solucionFinal;
 
     [SerializeField]
     List<GridPieza> piezas;
@@ -33,10 +35,19 @@ public class GridLogic : MonoBehaviour {
         solucionFinal.matrizPieza = mtxA;
 
         // Solución actual: todo a false, que se va actualizar a cada rato
+        // NO USAR COMO REFERENCIA DE LAS POSICIONES DE XMIN, XMAX, YMIN, YMAX
+        // Para eso está la solucionFinal
+
         solucionActual = new GridPieza();
         solucionActual.columns = columnas; 
         solucionActual.rows = filas;
         solucionActual.matrizPieza = new int [filas,columnas];
+        solucionFinal.IsLocal = solucionActual.IsLocal = true;
+//        solucionFinal.UpdateCoords();
+//        solucionActual.UpdateCoords();
+        //NO => Final y actual tienen los valores por defecto: 
+        //min: 0,0
+        //max: 600,700
 
         for (int i=0; i < filas; i++) {
             for (int j=0; j < columnas; j++) {
@@ -72,7 +83,7 @@ public class GridLogic : MonoBehaviour {
         CleanActual();
 
         // 2: Por toda la lista de piezas 
-        foreach (var pieza in piezas) {
+        foreach (GridPieza pieza in piezas) {
 
             // 2.1: Comprobar que se pueda solapar this sobre la solución
             if (pieza.IsInside(solucionFinal)) {
@@ -88,25 +99,29 @@ public class GridLogic : MonoBehaviour {
 
                 // 2.3: Escribir en la solución actual, la ocupación de la pieza deseada
 
+                Debug.Log(pieza.tipoPieza + " INSIDE!");
+
                 for (int i=0; i < pieza.rows; i++) {
+                    break;
                     for (int j=0; j < pieza.columns; j++) {
-                        Debug.Log(i);
-                        Debug.Log(j);
+
                         int RowInSolution =    i+RowOffset;
                         int ColumnInSolution = j+ColOffSet;
 
                         // Sobreescribe todo el rato, esté bien o mal. Para eso está el isSolution()
                         if (pieza.matrizPieza[i,j] > -1) { // Si es valida la pos. i,j
-                            Debug.Log("---"+i+""+j);
-                            Debug.Log(RowInSolution);
-                            Debug.Log(ColumnInSolution);
+                            Debug.Log("i:"+i+","+RowInSolution+" # j:" + j + ","+ColumnInSolution);
+                            Debug.Log("Filas: "+filas+", Columnas: " + columnas);
                             solucionActual.matrizPieza[RowInSolution,ColumnInSolution] = pieza.tipoPieza;
                         }
 
                     }
                 }
 
-            } 
+            } else {
+                Debug.Log(pieza.tipoPieza + "OUTSIDE!");
+            }
+
         }
 
 
