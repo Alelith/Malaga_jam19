@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridPieza : MonoBehaviour {
 
@@ -8,16 +9,21 @@ public class GridPieza : MonoBehaviour {
     public float xmin=0, ymin=0;
     public float xmax=0+600, ymax=0+700; // mins + distancia
     public int columns=0, rows=0;
+    public float numTipoPiezas=0.0f;
     public bool IsLocal = false;
     public int [,] matrizPieza;
 
     [SerializeField] RectTransform info, selff;
 
-    void Start() {
+    public Image imagen;
+
+    void Awake() {
+        imagen = GetComponent<Image>();
         switch(tipoPieza){
             case 1: {
                 columns = 7; 
                 rows = 9;
+                numTipoPiezas = 14.0f + 4.0f + 14.0f;
                 matrizPieza  = new int[,] { // Es la que se utiliza de referencia para comprobar la solucion
                     { 1,  1,   1,   1,   1,  1,  1}, //1
                     { 1,  1,   1,   1,   1,  1,  1}, //2
@@ -35,6 +41,7 @@ public class GridPieza : MonoBehaviour {
             case 2: {
                 columns = 3; 
                 rows = 4;
+                numTipoPiezas = 12.0f;
                 matrizPieza =new int[,]{ // Es la que se utiliza de referencia para comprobar la solucion
                     {2, 2,2},
                     {2, 2,2},
@@ -47,6 +54,7 @@ public class GridPieza : MonoBehaviour {
             case 3: {
                 columns = 3; 
                 rows = 4;
+                numTipoPiezas =  12.0f;
                 matrizPieza  = new int[,]{ // Es la que se utiliza de referencia para comprobar la solucion
                     {3, 3,3},
                     {3, 3,3},
@@ -59,6 +67,7 @@ public class GridPieza : MonoBehaviour {
             case 4: {
                 columns = 2; 
                 rows = 6;
+                numTipoPiezas = 12.0f;
                 matrizPieza = new int[,]{ // Es la que se utiliza de referencia para comprobar la solucion
                     {4, 4},
                     {4, 4},
@@ -80,21 +89,22 @@ public class GridPieza : MonoBehaviour {
                 break;
             }
         }
+        GetCoords();
     }
 
     public bool IsInside(GridPieza piezaTest){
         bool testMe = true;
         
         // sobre xmin e ymin de this
-        testMe &= piezaTest.xmin <= this.xmin && this.xmin <= piezaTest.xmax;
-        testMe &= piezaTest.ymin <= this.ymin && this.ymin <= piezaTest.ymax;
+        testMe &= piezaTest.xmin < this.xmin && this.xmin < piezaTest.xmax;
+        testMe &= piezaTest.ymin < this.ymin && this.ymin < piezaTest.ymax;
         
         // sobre xmax e ymax de this
-        testMe &= piezaTest.xmin <= this.xmax && this.xmax <= piezaTest.xmax;
-        testMe &= piezaTest.ymin <= this.ymax && this.ymax <= piezaTest.ymax;
+        testMe &= piezaTest.xmin < this.xmax && this.xmax < piezaTest.xmax;
+        testMe &= piezaTest.ymin < this.ymax && this.ymax < piezaTest.ymax;
 
-        Debug.Log("Mins: ("+piezaTest.xmin+","+piezaTest.ymin+")");
-        Debug.Log("MAxs: ("+piezaTest.xmax+","+piezaTest.ymax+")");
+ //       Debug.Log("Mins: ("+piezaTest.xmin+","+piezaTest.ymin+")");
+   //     Debug.Log("MAxs: ("+piezaTest.xmax+","+piezaTest.ymax+")");
 
         return testMe;
     }
@@ -105,30 +115,14 @@ public class GridPieza : MonoBehaviour {
     }
 
     void Update() {
-
-        UpdateCoords();
-
+        GetCoords();
     }
 
-    public void UpdateCoords(){
-        if (IsLocal) {
-            xmin=0;
-            ymin=0;
-            xmax=selff.sizeDelta.x;
-            ymax=selff.sizeDelta.y;
-        }else{
-            xmin=selff.anchoredPosition.x;
-            ymin=selff.anchoredPosition.y;
-            xmax=xmin + selff.sizeDelta.x;
-            ymax=ymin + selff.sizeDelta.y;
-        }
+    void GetCoords(){
+        xmin=selff.anchoredPosition.x;
+        ymin=selff.anchoredPosition.y;
+        xmax=xmin + selff.sizeDelta.x;
+        ymax=ymin + selff.sizeDelta.y;
     }
-
-
-
-
-
-
-
 
 }
