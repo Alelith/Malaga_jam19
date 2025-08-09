@@ -17,7 +17,9 @@ You can play Papel de burbujas here:
 
 Papel de burbujas was developed in only 2 days during Malaga Jam 19. As a result, the game may not be fully polished or stable. Please keep in mind that this is a jam project and is provided as-is for fun and experimentation.
 
-## Contributors
+## Team
 
-- (Add contributors here)
-
+- @eterd3v
+- @Alelith
+- @katastraa
+- @seraphicval
