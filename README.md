@@ -19,7 +19,7 @@ Papel de burbujas was developed in only 2 days during Malaga Jam 19. As a result
 
 ## Team
 
-- @eterd3v
-- @Alelith
-- @katastraa
-- @seraphicval
+- [eterd3v](https://github.com/eterd3v)
+- [Alelith](https://github.com/Alelith)
+- [katastraa](https://github.com/katastraa)
+- [seraphicval](https://github.com/seraphicval)
