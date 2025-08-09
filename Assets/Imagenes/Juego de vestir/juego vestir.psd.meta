@@ -75,12 +75,13 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
-  spriteImportData:
+  singleSpriteImportData:
   - name: 
     originalName: 
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -97,13 +98,14 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  mosaicSpriteImportData: []
-  rigSpriteImportData:
+  multiSpriteImportData: []
+  layeredSpriteImportData:
   - name: "cors\xE9"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -125,6 +127,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 343
@@ -146,6 +149,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -167,6 +171,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -188,6 +193,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -209,6 +215,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 343
@@ -230,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -251,6 +259,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 343
@@ -272,6 +281,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -293,6 +303,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 343
@@ -314,6 +325,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -335,6 +347,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -356,6 +369,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 1116
@@ -377,6 +391,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 343
@@ -398,6 +413,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -419,6 +435,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -440,6 +457,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -461,6 +479,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 772
@@ -482,6 +501,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -503,6 +523,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -524,6 +545,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -540,15 +562,502 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 0, y: 0}
-  characterData:
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  rigSpriteImportData:
+  - name: "cors\xE9"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 2299
+      width: 198
+      height: 256
+    spriteID: 7bcf97b349f2a6f45a70f7037ebab758
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 2299}
+    spritePosition: {x: 1076, y: 721}
+  - name: sudadera
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 3413
+      width: 336
+      height: 446
+    spriteID: def14b5aa236ddc44b15ec4b30a1b113
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 3413}
+    spritePosition: {x: 1363, y: 269}
+  - name: crop top
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 2736
+      width: 214
+      height: 205
+    spriteID: b50dc2ffc68e7274e9abfdeb504210b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 2736}
+    spritePosition: {x: 1479, y: 735}
+  - name: camiseta burbuja
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 1791
+      width: 240
+      height: 294
+    spriteID: 84487b80419247c4f8af978e89e79742
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 1791}
+    spritePosition: {x: 1264, y: 707}
+  - name: 'camiseta winx '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 1092
+      width: 336
+      height: 402
+    spriteID: af6353a7824f1394c99b78b1b1ddd585
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 1092}
+    spritePosition: {x: 1052, y: 314}
+  - name: falda pomposa
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 1994
+      width: 353
+      height: 467
+    spriteID: 7c149977380bb62418889ab91ad8aafc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 1994}
+    spritePosition: {x: 1388, y: 179}
+  - name: vaqueros
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2941
+      width: 283
+      height: 566
+    spriteID: 36d57dede7d336e45ae70f34290b0c58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2941}
+    spritePosition: {x: 1432, y: 460}
+  - name: pantalones cargo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 2469
+      width: 285
+      height: 546
+    spriteID: ecd07d03a7ea8414aa63dd0f59fd042f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 2469}
+    spritePosition: {x: 1235, y: 160}
+  - name: pijama
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3515
+      width: 300
+      height: 532
+    spriteID: 9b65d77e142e425439a1892aab9cad65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3515}
+    spritePosition: {x: 1073, y: 189}
+  - name: faldita rosa
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 3023
+      width: 393
+      height: 382
+    spriteID: 685c7e5a08d2dff44848aba6101c97c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 3023}
+    spritePosition: {x: 1045, y: 624}
+  - name: 'botas '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 1502
+      width: 310
+      height: 281
+    spriteID: 8b35bdece294a574795264ef4894d4a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 1502}
+    spritePosition: {x: 1412, y: 183}
+  - name: tenis
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 2563
+      width: 288
+      height: 165
+    spriteID: b43b69107b17e3e4781a0bfa61654cf8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 2563}
+    spritePosition: {x: 1421, y: 773}
+  - name: plataformas
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1116
+      y: 1092
+      width: 381
+      height: 243
+    spriteID: 3879a2cd23397bd408bec3f34a1a26e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1116, y: 1092}
+    spritePosition: {x: 1056, y: 621}
+  - name: pantuflas
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 3867
+      width: 296
+      height: 224
+    spriteID: 919940700b4d2e54f87156900585b701
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 3867}
+    spritePosition: {x: 1421, y: 469}
+  - name: zapaos vestir
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 2093
+      width: 294
+      height: 198
+    spriteID: b42c9c47cfee85543a031e36be89b6c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 2093}
+    spritePosition: {x: 1111, y: 356}
+  - name: "bot\xF3n"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 3181
+      width: 238
+      height: 107
+    spriteID: bc37dbf557e831a4589b6c6f582f294d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 3181}
+    spritePosition: {x: 1019, y: 25}
+  - name: "bot\xF3n"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 2949
+      width: 238
+      height: 108
+    spriteID: 01556d7ad1729e744a3d639b0021aca0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 2949}
+    spritePosition: {x: 1525, y: 25}
+  - name: "bot\xF3n"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 772
+      y: 3065
+      width: 238
+      height: 108
+    spriteID: 23e7ebd7fb0aa23479eb571008c91272
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 772, y: 3065}
+    spritePosition: {x: 1274, y: 25}
+  - name: cajon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 760
+      height: 894
+    spriteID: 889821d74faa1eb4391ae04f39ede7cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1092}
+    spritePosition: {x: 1014, y: 155}
+  - name: cuerpo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1994
+      width: 331
+      height: 939
+    spriteID: f86be93a08dc14443a654c17d8fe70be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1994}
+    spritePosition: {x: 403, y: 77}
+  - name: fondo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1920
+      height: 1080
+    spriteID: c8c54cdf7ee87904a913b922e107c7e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  sharedRigSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -601,15 +1110,267 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
   skeletonAssetReferenceID: 
   pipeline: {instanceID: 0}
   pipelineVersion: 
-  padding: 4
-  spriteSizeExpand: 0
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: ropa
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: fabd47b670983af46836e221ca4c53db
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: camiseta
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 482c3948a1412404e8264291dbbfab3a
+    layerID: 678530457
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: "cors\xE9"
+    spriteName: "cors\xE9"
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 7bcf97b349f2a6f45a70f7037ebab758
+    layerID: 82770778
+    mosaicPosition: {x: 772, y: 2299}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sudadera
+    spriteName: sudadera
+    isGroup: 0
+    parentIndex: 1
+    spriteID: def14b5aa236ddc44b15ec4b30a1b113
+    layerID: 1071828717
+    mosaicPosition: {x: 343, y: 3413}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: crop top
+    spriteName: crop top
+    isGroup: 0
+    parentIndex: 1
+    spriteID: b50dc2ffc68e7274e9abfdeb504210b8
+    layerID: -122773355
+    mosaicPosition: {x: 772, y: 2736}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: camiseta burbuja
+    spriteName: camiseta burbuja
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 84487b80419247c4f8af978e89e79742
+    layerID: -404691822
+    mosaicPosition: {x: 772, y: 1791}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: 'camiseta winx '
+    spriteName: 'camiseta winx '
+    isGroup: 0
+    parentIndex: 1
+    spriteID: af6353a7824f1394c99b78b1b1ddd585
+    layerID: -438699987
+    mosaicPosition: {x: 772, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pantalones
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: acf6713ed64af3449bf712fb04536ddd
+    layerID: -956939371
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: falda pomposa
+    spriteName: falda pomposa
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 7c149977380bb62418889ab91ad8aafc
+    layerID: 1818570457
+    mosaicPosition: {x: 343, y: 1994}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: vaqueros
+    spriteName: vaqueros
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 36d57dede7d336e45ae70f34290b0c58
+    layerID: -374678440
+    mosaicPosition: {x: 4, y: 2941}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pantalones cargo
+    spriteName: pantalones cargo
+    isGroup: 0
+    parentIndex: 7
+    spriteID: ecd07d03a7ea8414aa63dd0f59fd042f
+    layerID: -275701583
+    mosaicPosition: {x: 343, y: 2469}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pijama
+    spriteName: pijama
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 9b65d77e142e425439a1892aab9cad65
+    layerID: -1442496658
+    mosaicPosition: {x: 4, y: 3515}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: faldita rosa
+    spriteName: faldita rosa
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 685c7e5a08d2dff44848aba6101c97c2
+    layerID: 1298010856
+    mosaicPosition: {x: 343, y: 3023}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: zapatos
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: ec653578b87fbce4e9d5a8e77923f61b
+    layerID: -1647938982
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: 'botas '
+    spriteName: 'botas '
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 8b35bdece294a574795264ef4894d4a6
+    layerID: 1730841335
+    mosaicPosition: {x: 772, y: 1502}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tenis
+    spriteName: tenis
+    isGroup: 0
+    parentIndex: 13
+    spriteID: b43b69107b17e3e4781a0bfa61654cf8
+    layerID: -730699335
+    mosaicPosition: {x: 772, y: 2563}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: plataformas
+    spriteName: plataformas
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 3879a2cd23397bd408bec3f34a1a26e5
+    layerID: 27191276
+    mosaicPosition: {x: 1116, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pantuflas
+    spriteName: pantuflas
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 919940700b4d2e54f87156900585b701
+    layerID: -983920764
+    mosaicPosition: {x: 343, y: 3867}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: zapaos vestir
+    spriteName: zapaos vestir
+    isGroup: 0
+    parentIndex: 13
+    spriteID: b42c9c47cfee85543a031e36be89b6c4
+    layerID: 2085467237
+    mosaicPosition: {x: 772, y: 2093}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "bot\xF3n"
+    spriteName: "bot\xF3n"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bc37dbf557e831a4589b6c6f582f294d
+    layerID: -1321948774
+    mosaicPosition: {x: 772, y: 3181}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "bot\xF3n"
+    spriteName: "bot\xF3n"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 01556d7ad1729e744a3d639b0021aca0
+    layerID: 1079663978
+    mosaicPosition: {x: 772, y: 2949}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "bot\xF3n"
+    spriteName: "bot\xF3n"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 23e7ebd7fb0aa23479eb571008c91272
+    layerID: 1079663981
+    mosaicPosition: {x: 772, y: 3065}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: cajon
+    spriteName: cajon
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 889821d74faa1eb4391ae04f39ede7cd
+    layerID: 996744185
+    mosaicPosition: {x: 4, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: cuerpo
+    spriteName: cuerpo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f86be93a08dc14443a654c17d8fe70be
+    layerID: -1938349868
+    mosaicPosition: {x: 4, y: 1994}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: fondo
+    spriteName: fondo
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c8c54cdf7ee87904a913b922e107c7e8
+    layerID: 35710952
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   mosaicPSDLayers: []
   rigPSDLayers:
   - name: ropa
@@ -863,7 +1624,6 @@ ScriptedImporter:
     isImported: 1
     isVisible: 1
   sharedRigPSDLayers: []
-  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 638734293829205033
   spriteSizeExpandChanged: 0

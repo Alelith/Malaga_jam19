@@ -9,24 +9,70 @@ using Random = UnityEngine.Random;
 
 public class DressGameController : IInitialSettings
 {
-    [SerializeField] List<GameObject> shirts;
-    [SerializeField] List<GameObject> jeans;
-    [SerializeField] List<GameObject> foots;
-    [SerializeField] RectTransform openCloset;
-    [SerializeField] RectTransform info;
-    [SerializeField] Dialog dialog;
-    [SerializeField] CanvasGroup generalDialog;
-    [SerializeField] CanvasGroup exitButton;
+    [SerializeField]
+    [Tooltip("List of shirt GameObjects.")]
+    List<GameObject> shirts;
 
     [SerializeField]
+    [Tooltip("List of jean GameObjects.")]
+    List<GameObject> jeans;
+
+    [SerializeField]
+    [Tooltip("List of foot GameObjects.")]
+    List<GameObject> foots;
+
+    [SerializeField]
+    [Tooltip("The RectTransform of the open closet.")]
+    RectTransform openCloset;
+
+    [SerializeField]
+    [Tooltip("The RectTransform of the info panel.")]
+    RectTransform info;
+    
+    [SerializeField]
+    [Tooltip("The Dialog component.")]
+    Dialog dialog;
+
+    [SerializeField]
+    [Tooltip("The CanvasGroup for the general dialog.")]
+    CanvasGroup generalDialog;
+
+    [SerializeField]
+    [Tooltip("The CanvasGroup for the exit button.")]
+    CanvasGroup exitButton;
+
+    [SerializeField]
+    [Tooltip("List of correct dress GameObjects.")]
     List<GameObject> correctDresses = new List<GameObject>();
+
+    /// <summary>
+    /// List of currently selected dress GameObjects.
+    /// </summary>
     List<GameObject> selectedDresses = new List<GameObject>();
+
+    /// <summary>
+    /// Dictionary that keeps track of the anchor positions for each dress.
+    /// </summary>
     Dictionary<RectTransform, bool> anchors = new Dictionary<RectTransform, bool>();
+
+    /// <summary>
+    /// The currently dragged dress GameObject.
+    /// </summary>
     RectTransform tempDress;
+
+    /// <summary>
+    /// Dictionary that keeps track of the temporary positions for each dress.
+    /// </summary>
     readonly Dictionary<string, Vector2> tempPosition = new Dictionary<string, Vector2>();
 
+    /// <summary>
+    /// Dictionary that keeps track of the anchored positions for each dress.
+    /// </summary>
     Dictionary<RectTransform, RectTransform> anchored = new(); 
     
+    /// <summary>
+    /// Indicates whether the text is currently being shown.
+    /// </summary>
     bool isShowingText = false;
 
     void Start()
@@ -37,10 +83,6 @@ public class DressGameController : IInitialSettings
             tempPosition.Add(jean.name, ((RectTransform)jean.transform).anchoredPosition);
         foreach (var foot in foots)
             tempPosition.Add(foot.name, ((RectTransform)foot.transform).anchoredPosition);
-        
-        /*correctDresses.Add(shirts[Random.Range(0, shirts.Count)]);
-        correctDresses.Add(jeans[Random.Range(0, shirts.Count)]);
-        correctDresses.Add(foots[Random.Range(0, shirts.Count)]);*/
 
         foreach (var i in GameObject.FindGameObjectsWithTag("Anchor"))
             anchors.Add((RectTransform)i.transform, false);
@@ -60,15 +102,22 @@ public class DressGameController : IInitialSettings
         info.anchoredPosition = vector + (Vector2.left * 500);
     }
 
+    /// <summary>
+    /// Called when a dress is being dragged.
+    /// </summary>
+    /// <param name="dress">The dress being dragged.</param>
     public void OnDragDress(RectTransform dress) => tempDress = dress;
     
-    public void OnDropDress() 
+    /// <summary>
+    /// Called when a dress is dropped.
+    /// </summary>
+    public void OnDropDress()
     {
         if (tempDress.CompareTag("Shirt"))
         {
             foreach (var anchor in anchors)
             {
-                if (anchor.Key.name.Contains("Shirt") && (anchor.Value || 
+                if (anchor.Key.name.Contains("Shirt") && (anchor.Value ||
                                                           Vector2.Distance(tempDress.position, anchor.Key.position) >= 1.5f))
                 {
                     if (selectedDresses.Contains(tempDress.gameObject))
@@ -79,14 +128,14 @@ public class DressGameController : IInitialSettings
                         anchored.Remove(tempDress);
                     break;
                 }
-                if (anchor.Key.name.Contains("Shirt") && !anchor.Value && 
+                if (anchor.Key.name.Contains("Shirt") && !anchor.Value &&
                     Vector2.Distance(tempDress.position, anchor.Key.position) < 1.5f)
                 {
                     tempDress.position = anchor.Key.position;
                     anchors[anchor.Key] = true;
-                    
+
                     selectedDresses.Add(tempDress.gameObject);
-                    
+
                     anchored.Add(tempDress, anchor.Key);
                     break;
                 }
@@ -96,7 +145,7 @@ public class DressGameController : IInitialSettings
         {
             foreach (var anchor in anchors)
             {
-                if (anchor.Key.name.Contains("Jean") && (anchor.Value || 
+                if (anchor.Key.name.Contains("Jean") && (anchor.Value ||
                                                          Vector2.Distance(tempDress.position, anchor.Key.position) >= 1.5f))
                 {
                     if (selectedDresses.Contains(tempDress.gameObject))
@@ -107,14 +156,14 @@ public class DressGameController : IInitialSettings
                         anchored.Remove(tempDress);
                     break;
                 }
-                if (anchor.Key.name.Contains("Jean") && !anchor.Value && 
+                if (anchor.Key.name.Contains("Jean") && !anchor.Value &&
                     Vector2.Distance(tempDress.position, anchor.Key.position) < 1.5f)
                 {
                     tempDress.position = anchor.Key.position;
                     anchors[anchor.Key] = true;
-                    
+
                     selectedDresses.Add(tempDress.gameObject);
-                    
+
                     anchored.Add(tempDress, anchor.Key);
                     break;
                 }
@@ -124,7 +173,7 @@ public class DressGameController : IInitialSettings
         {
             foreach (var anchor in anchors)
             {
-                if (anchor.Key.name.Contains("Foot") && (anchor.Value || 
+                if (anchor.Key.name.Contains("Foot") && (anchor.Value ||
                                                          Vector2.Distance(tempDress.position, anchor.Key.position) >= 1.5f))
                 {
                     if (selectedDresses.Contains(tempDress.gameObject))
@@ -135,23 +184,26 @@ public class DressGameController : IInitialSettings
                         anchored.Remove(tempDress);
                     break;
                 }
-                if (anchor.Key.name.Contains("Foot") && !anchor.Value && 
+                if (anchor.Key.name.Contains("Foot") && !anchor.Value &&
                     Vector2.Distance(tempDress.position, anchor.Key.position) < 1.5f)
                 {
                     tempDress.position = anchor.Key.position;
                     anchors[anchor.Key] = true;
-                    
+
                     selectedDresses.Add(tempDress.gameObject);
-                    
+
                     anchored.Add(tempDress, anchor.Key);
                     break;
                 }
             }
         }
-        
+
         tempDress = null;
     }
     
+    /// <summary>
+    /// Called when the dresses are checked for correctness.
+    /// </summary>
     public void OnCheckDresses()
     {
         int correctDressesCount = 0;
@@ -162,16 +214,16 @@ public class DressGameController : IInitialSettings
         {
             Typewriter typewriter = generalDialog.GetComponentInChildren<Typewriter>();
             generalDialog.DOFade(1, 0.5f);
-            
+
             openCloset.DOAnchorPosY(openCloset.sizeDelta.y, 0.5f).OnComplete(() =>
             {
                 openCloset = null;
             });
-            
+
             exitButton.DOFade(1, 0.5f);
             exitButton.interactable = true;
             exitButton.blocksRaycasts = true;
-            
+
             if (correctDressesCount == 3)
                 typewriter.Write(CustomTagsManager.ProccessMessage(dialog[dialog.Count - 1], out string clearMessage), clearMessage);
             else
@@ -181,6 +233,10 @@ public class DressGameController : IInitialSettings
             Debug.Log("No has seleccionado todas las prendas");
     }
     
+    /// <summary>
+    /// Called when the closet is changed.
+    /// </summary>
+    /// <param name="newCloset">The new closet to open.</param>
     public void OnChangeCloset(RectTransform newCloset)
     {
         if (openCloset == newCloset) return;
@@ -191,6 +247,10 @@ public class DressGameController : IInitialSettings
         });
     }
     
+    /// <summary>
+    /// Called when the dress information is shown.
+    /// </summary>
+    /// <param name="index">The index of the dress.</param>
     public void OnShowInfo(int index)
     {
         if (!isShowingText)
@@ -204,9 +264,15 @@ public class DressGameController : IInitialSettings
         else
             info.GetComponent<CanvasGroup>().alpha = 0;
     }
-    
+
+    /// <summary>
+    /// Called when the dress information is hidden.
+    /// </summary>
     public void OnHideInfo() => info.GetComponent<CanvasGroup>().DOFade(0, 0.5f);
 
+    /// <summary>
+    /// Called when the initial settings are set.
+    /// </summary>
     public override void SetInitialSettings()
     {
         CanvasGroup self = GetComponent<CanvasGroup>();

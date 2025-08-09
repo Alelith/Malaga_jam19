@@ -24,6 +24,7 @@ namespace DialogSystem
         TextAnimator textAnim;
         
         [SerializeField]
+        [Tooltip("The text that will be typewritten")]
         string textToTypewrite;
         
         /// <summary>

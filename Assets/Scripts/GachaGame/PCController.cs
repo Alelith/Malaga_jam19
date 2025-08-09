@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PCController : IInitialSettings
 {
-    [SerializeField] GameObject gameCore;
+    [SerializeField]
+    [Tooltip("Core game object.")]
+    GameObject gameCore;
     
     public override void SetInitialSettings()
     {

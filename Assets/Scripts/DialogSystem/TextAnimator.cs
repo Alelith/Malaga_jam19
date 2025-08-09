@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
@@ -11,28 +10,54 @@ namespace DialogSystem
     public class TextAnimator
     {
         [SerializeField]
+        [Tooltip("Indicates whether the text animation should grow in size.")]
         bool isSizeGrowAnim;
         
         [SerializeField]
+        [Tooltip("Indicates whether the text animation should go down.")]
         bool isGoDownAnim;
 
-        [SerializeField] 
+        [SerializeField]
+        [Tooltip("Indicates the height to which the text should move down.")]
         float goDownHeight;
         
+        /// <summary>
+        /// Indicates whether the text animation should stop.
+        /// </summary>
         bool stopAnimating;
 
+        /// <summary>
+        /// The TextMeshProUGUI component that displays the text.
+        /// </summary>
         TextMeshProUGUI textBox;
 
+        /// <summary>
+        /// The original color of the text.
+        /// </summary>
+        public Color32[] originalColors;
+
+        /// <summary>
+        /// Indicates whether the text is currently animating.
+        /// </summary>
         public bool textAnimating;
         
+        /// <summary>
+        /// The TextMeshProUGUI component that displays the text.
+        /// </summary>
         public TextMeshProUGUI TextBox { set => textBox = value; }
 
+        /// <summary>
+        /// Starts animating the text in the TextMeshProUGUI component based on the provided commands and processed message.
+        /// </summary>
+        /// <param name="commands">The list of dialogue actions to execute.</param>
+        /// <param name="processedMessage">The processed message to display.</param>
+        /// <param name="onFinish">The action to execute when the animation finishes.</param>
         public IEnumerator AnimateTextIn(List<DialogueAction> commands, string processedMessage, Action onFinish)
         {
             textAnimating = true;
             float secondsPerCharacter = 0.5f / 10f;
             float timeOfLastCharacter = 0;
-
+    
             AnimationInfo[] textAnimInfo = SeparateOutTextAnimInfo(commands);
             TMP_TextInfo textInfo = textBox.textInfo;
             foreach (TMP_MeshInfo meshInfer in textInfo.meshInfo)
@@ -89,8 +114,6 @@ namespace DialogSystem
                         }
                     }
                 }
-                
-                //Debug.Log($"Visible character #{visibleCharacterIndex} is {visibleCharacterIndex}. Is the first character visible? {isAllcharsVisible}");
                     
                 if (visibleCharacterIndex == charCount && isAllcharsVisible)
                     FinishAnimating(onFinish);
@@ -174,6 +197,13 @@ namespace DialogSystem
             
         }
 
+        /// <summary>
+        /// Executes the commands for the current visible character index.
+        /// </summary>
+        /// <param name="commands">The list of dialogue actions to execute.</param>
+        /// <param name="visibleCharacterIndex">The index of the currently visible character.</param>
+        /// <param name="secondsPerCharacter">The time in seconds per character.</param>
+        /// <param name="timeOfLastCharacter">The time at which the last character was displayed.</param>
         void ExecuteCommandsForCurrentIndex(List<DialogueAction> commands, int visibleCharacterIndex, ref float secondsPerCharacter, ref float timeOfLastCharacter)
         {
             for (int i = 0; i < commands.Count; i++)
@@ -195,6 +225,10 @@ namespace DialogSystem
             }
         }
 
+        /// <summary>
+        /// Finishes the text animation.
+        /// </summary>
+        /// <param name="onFinish">The action to execute when the animation finishes.</param>
         void FinishAnimating(Action onFinish)
         {
             textAnimating = false;
@@ -202,6 +236,15 @@ namespace DialogSystem
             onFinish?.Invoke();
         }
 
+        /// <summary>
+        /// Executes the commands for the current visible character index.
+        /// </summary>
+        /// <param name="textAnimInfo">The animation information for the text.</param>
+        /// <param name="charIndex">The index of the character to animate.</param>
+        /// <param name="fontSize">The font size of the text.</param>
+        /// <param name="time">The current time of the animation.</param>
+        /// <param name="color">The color of the text.</param>
+        /// <returns>The adjusted vertex positions.</returns>
         Vector3[] GetAnimPosAdjustment(AnimationInfo[] textAnimInfo, int charIndex, float fontSize, float time, ref Color32[] color)
         {
             Vector3[] verticesOffsets = new Vector3[4];
@@ -333,14 +376,28 @@ namespace DialogSystem
             return verticesOffsets;
         }
         
+        /// <summary>
+        /// Determines if the next character should be shown based on the timing.
+        /// </summary>
+        /// <param name="secondsPerCharacter">The time to wait before showing the next character.</param>
+        /// <param name="timeOfLastCharacter">The time when the last character was shown.</param>
+        /// <returns>True if the next character should be shown, false otherwise.</returns>
         static bool ShouldShowNextCharacter(float secondsPerCharacter, float timeOfLastCharacter) => Time.unscaledTime - timeOfLastCharacter > secondsPerCharacter;
 
+        /// <summary>
+        /// Skips to the end of the current message.
+        /// </summary>
         public void SkipToEndOfCurrentMessage()
         {
             if (textAnimating)
                 stopAnimating = true;
         }
         
+        /// <summary>
+        /// Separates out the text animation information from the dialogue commands.
+        /// </summary>
+        /// <param name="commands">The list of dialogue commands.</param>
+        /// <returns>An array of animation information.</returns>
         AnimationInfo[] SeparateOutTextAnimInfo(List<DialogueAction> commands)
         {
             Dictionary<DialogueAction, DialogueAction> startEndPairs = new();
@@ -387,7 +444,15 @@ namespace DialogSystem
             return tempResult.ToArray();
         }
 
-        public static float JumpFunction(float time, int charIndex, float fontSize, AnimationInfo info)
+        /// <summary>
+        /// Executes the commands for the current visible character index.
+        /// </summary>
+        /// <param name="time">The current time of the animation.</param>
+        /// <param name="charIndex">The index of the character to animate.</param>
+        /// <param name="fontSize">The font size of the text.</param>
+        /// <param name="info">The animation information for the text.</param>
+        /// <returns>The adjusted vertex positions.</returns>
+        float JumpFunction(float time, int charIndex, float fontSize, AnimationInfo info)
         {
             float ajustment = 2f * info.K;
 

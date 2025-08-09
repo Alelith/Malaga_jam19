@@ -13,21 +13,14 @@ namespace DialogSystem
     {
         #region Dictionaries
         /// <summary>
-        /// Dictionary that relates the custom tag regex and its equivalent on ActionType enum
-        /// </summary>
+		/// Dictionary that maps custom tag regex patterns to their corresponding ActionType.
+		/// </summary>
         static readonly Dictionary<Regex, ActionType> customTags = new ()
         {
             { new Regex(@"<s:(?<attribute>(\w*|\d*(?:\,\d+)?))>"), ActionType.SPEED },
             { new Regex(@"<p:(?<attribute>(\w*|\d*(?:\,\d+)?))>"), ActionType.PAUSE },
             { new Regex(@"<a:(?<attribute>\w*)( k=(?<k>(\d*(?:\,\d+)?)))?( q=(?<q>(\d*(?:\,\d+)?)))?( c=(?<c>(\d*(?:\,\d+)?)))?( origin=(?<origin>(#([0-9A-Fa-f][0-9A-Fa-f]){3})) target=(?<target>(#([0-9A-Fa-f][0-9A-Fa-f]){3})))?>"), ActionType.DIALOGANIMATION },
             { new Regex("</a>"), ActionType.ENDANIMATION }
-        };
-        // <a:wave>Escribo mi texto animado</a>
-
-        static readonly Dictionary<Regex, TMPTagType> TMPTags = new()
-        {
-            {new Regex("<color=#[0-8A-Fa-f]{3,6}>"), TMPTagType.COLOR},
-            {new Regex("</color>"), TMPTagType.ENDCOLOR}
         };
 
         /// <summary>
@@ -81,12 +74,10 @@ namespace DialogSystem
                     float attributeK = 1;
                     float attributeQ = 1;
                     float attributeC = 1;
-                    float tempAttributeFloat;
                     Color origin = Color.white;
                     Color target = Color.black;
                     AnimationType attributeAction = AnimationType.NULL;
                     string attribute = "";
-                    string actor = "";
                     Vector3 position = new();
 
                     // If the type of the current tag is not an end tag parse the attributes
@@ -113,7 +104,7 @@ namespace DialogSystem
                                     if (ColorUtility.TryParseHtmlString(match.Groups["target"].Value, out Color tempColor))
                                         target = tempColor;
                                 break;
-                            case ActionType.SPEED or ActionType.PAUSE when float.TryParse(attribute, out tempAttributeFloat):
+                            case ActionType.SPEED or ActionType.PAUSE when float.TryParse(attribute, out float tempAttributeFloat):
                                 attributeFloat = tempAttributeFloat;
                                 break;
                             case ActionType.SPEED:
@@ -148,8 +139,8 @@ namespace DialogSystem
         }
         
         /// <summary>
-        /// Function that returns the amount of characters before the tagged one
-        /// </summary>
+		/// Returns the number of characters before the tag position, ignoring characters inside brackets.
+		/// </summary>
         /// <param name="message">Line of dialog where the tag is in</param>
         /// <param name="index">Index where the tag is placed on the string</param>
         /// <returns>The amount of characters before the tagged one</returns>
@@ -292,13 +283,6 @@ namespace DialogSystem
         DEFORM,
         SLIDE,
         COLOR,
-        NULL
-    }
-
-    public enum TMPTagType
-    {
-        COLOR,
-        ENDCOLOR,
         NULL
     }
     #endregion
